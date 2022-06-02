@@ -1,34 +1,21 @@
 import React from 'react';
 import './App.css';
 
-// function Helloword(props){
-//   return(
-//     <div id="hola">
-//     <h3>{props.subtitulo}</h3>
-//     {props.mitexto}</div>
-//   )
-// }
+import tasks from './ejemplo/tasks.json'
 
-class Helloworld extends React.Component {
+import Tasks from './componentes/Tasks'
+
+class App extends React.Component{
+  
+  state={
+    tasks: tasks
+  }
+
   render(){
-    return(
-      <div id="hola">
-      <h3>{this.props.subtitulo}</h3>
-          {this.props.mitexto}</div>
-    ) 
-  }
-    
-  }
-
-//const App = () => <div>Este es mi primer componente con una funcion flecha <Helloword/></div>
-
-function App() {
-
-  return (
-    <div>
-      Este es mi primer componente: <Helloworld mitexto="Hola joselias" subtitulo="Mi nombre es:"/> <Helloworld mitexto="Esta es mi primera SPA" subtitulo="Que estoy desarrollando"/> <Helloworld mitexto="aplicaciones de una sola pagina" subtitulo="SPA:"/>
+    return <div>
+      <Tasks tasks={this.state.tasks }/>
     </div>
-  );
+  }
 }
 
 export default App;
