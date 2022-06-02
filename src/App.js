@@ -18,7 +18,7 @@ class Helloworld extends React.Component {
     ) 
   }
     
-}
+  }
 
 //const App = () => <div>Este es mi primer componente con una funcion flecha <Helloword/></div>
 
